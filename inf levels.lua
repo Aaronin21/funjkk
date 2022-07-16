@@ -14,6 +14,17 @@ tp("a")
 
 --change however long u want it
 
+local X;
+
+X = hookmetamethod(game,"__namecall",function(self,...)
+   local args = {...};
+   if tostring(self) == "moddelteasdasd123" then 
+       return wait(9e9)
+     end
+   return X(self,...) 
+end)
+
+
 while task.wait(0.5) do 
 tp("a")
 local ohString1 = "AddQuest"
