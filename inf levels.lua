@@ -24,6 +24,16 @@ X = hookmetamethod(game,"__namecall",function(self,...)
    return X(self,...) 
 end)
 
+for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+   if v:IsA("MeshPart") or v:IsA("Part") or v:IsA("Decal") then
+local ohString1 = "Change_Transparency"
+local ohInstance2 = v
+local ohNumber3 = 1
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(ohString1, ohInstance2, ohNumber3)
+end
+end
+
 
 while task.wait(0.1) do 
 tp("a")
