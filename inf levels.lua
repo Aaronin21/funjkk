@@ -25,7 +25,7 @@ X = hookmetamethod(game,"__namecall",function(self,...)
 end)
 
 
-while task.wait(0.5) do 
+while task.wait(0.1) do 
 tp("a")
 local ohString1 = "AddQuest"
 local ohString2 = "Players."..game.Players.LocalPlayer.Name..".PlayerGui.Npc_Dialogue.LocalScript.Functions"
