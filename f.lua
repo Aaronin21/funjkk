@@ -581,19 +581,33 @@ function ESP:Add(obj, options)
 
     box.Components["Haki"] = Draw("Text", {
 
-        Text = "f";
 
-        Thickness = self.Thickness,
 
-        Color = color,
+		Text = "Haki: 1/100",
 
-        Transparency = 1,
 
-        Filled = false,
 
-        Visible = self.Enabled and self.Boxes
+		Color = box.Color,
 
-    })
+
+
+		Center = true,
+
+
+
+		Outline = true,
+
+
+
+        Size = 19,
+
+
+
+        Visible = self.Enabled and self.Names
+
+
+
+	})
 
 
 
