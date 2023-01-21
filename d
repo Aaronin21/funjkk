@@ -3425,7 +3425,7 @@ function library:CreateWindow(name, size, hidebutton)
 
             configSystem.sector = tab:CreateSector("Configs", side or "left")
 
-            local ConfigName = configSystem.sector:AddTextbox("Config Name", "", ConfigName, function() end, "")
+            local ConfigName = configSystem.sector:AddTextbox("default", "", ConfigName, function() end, "")
             local default = tostring(listfiles(configSystem.configFolder)[1] or ""):gsub(configSystem.configFolder .. "\\", ""):gsub(".txt", "")
             local Config = configSystem.sector:AddDropdown("Configs", {}, default, false, function() end, "")
             for i,v in pairs(listfiles(configSystem.configFolder)) do
@@ -3544,7 +3544,6 @@ function library:CreateWindow(name, size, hidebutton)
             return configSystem
         end
 
-        --[[ not finished lol
         function tab:CreatePlayerlist(name)
             local list = { }
             list.name = name or ""
@@ -3661,7 +3660,7 @@ function library:CreateWindow(name, size, hidebutton)
             
             return list
         end
-        ]]--
+       
 
         table.insert(window.Tabs, tab)
         return tab
